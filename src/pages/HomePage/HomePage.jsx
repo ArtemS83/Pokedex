@@ -14,18 +14,35 @@ const theme = createTheme({
   },
 });
 
+const LIMIT_ON_PAGE = 30;
+
 const HomePage = () => {
   const [pokemons, setPokemons] = useState([]);
   const [textInput, setTextInput] = useState('');
+  const [pageOffset, setPageOffset] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     pokemonsApi
-      .fetchPokemons()
+      .fetchPokemons(pageOffset, LIMIT_ON_PAGE)
       .then(({ results }) => {
-        setPokemons(results);
+        setPokemons(prevResults => [...prevResults, ...results]);
+
+        if (pageOffset < LIMIT_ON_PAGE) return;
+
+        const scrollHeight =
+          document.documentElement.clientHeight +
+          document.documentElement.scrollTop -
+          66;
+
+        window.scrollTo({
+          top: scrollHeight,
+          behavior: 'smooth',
+        });
       })
-      .catch(error => console.log('ERROR: ', error));
-  }, []);
+      .finally(() => setIsLoading(false));
+  }, [pageOffset]);
 
   const changeHandler = event => {
     setTextInput(event.target.value);
@@ -36,6 +53,10 @@ const HomePage = () => {
     return pokemons.filter(pokemon =>
       pokemon.name.toLowerCase().includes(normalizedSearch),
     );
+  };
+
+  const hendelLoadMore = () => {
+    setPageOffset(prev => prev + LIMIT_ON_PAGE);
   };
 
   return (
@@ -59,7 +80,11 @@ const HomePage = () => {
           />
         </ThemeProvider>
       </Grid>
-      <PokemonsGallery pokemons={handlePokemons()} />
+      <PokemonsGallery
+        pokemons={handlePokemons()}
+        onLoadMore={hendelLoadMore}
+        isLoading={isLoading}
+      />
       <ButtonScrollTop />
     </>
   );

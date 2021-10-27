@@ -8,14 +8,14 @@ const PokemonGalleryItem = ({ name, url, location }) => {
   const [pokemon, setPokemon] = useState(null);
   const backLocation = location.pathname;
 
-  useEffect(() => {
-    pokemonsApi
-      .fetchPok(url)
-      .then(data => {
-        setPokemon(data);
-      })
-      .catch(error => console.log('ERROR: ', error));
-  }, [url]);
+  // useEffect(() => {
+  //   pokemonsApi
+  //     .fetchPok(url)
+  //     .then(data => {
+  //       setPokemon(data);
+  //     })
+  //     .catch(error => console.log('ERROR: ', error));
+  // }, [url]);
 
   useEffect(() => {
     pokemonsApi
@@ -27,7 +27,7 @@ const PokemonGalleryItem = ({ name, url, location }) => {
   }, [name]);
 
   return (
-    <li className={style.Item}>
+    <li className={style.item}>
       <Link
         to={{
           pathname: `pokemons/${name}`,
