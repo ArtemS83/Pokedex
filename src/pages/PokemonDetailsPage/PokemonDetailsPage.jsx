@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import style from './PokemonDetailsPage.module.scss';
+import Button from '@material-ui/core/Button';
 import PokemonDetailsItem from 'components/PokemonDetailsItem';
 import NotFound from 'components/NotFound';
-import Button from 'components/Button';
 import pokemonsApi from 'services/pokemonsApi';
 import backgroundImage from 'images/pokemon-bgi.jpg';
 
@@ -41,7 +41,9 @@ const PokemonDetailsPage = props => {
 
   return (
     <div className={style.div}>
-      <Button onClick={hendelGoBack} />
+      <Button variant="contained" color="secondary" onClick={hendelGoBack}>
+        Go Back
+      </Button>
       {isPokemon ? (
         <>
           <PokemonDetailsItem pokemon={pokemon} />

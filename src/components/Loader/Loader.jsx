@@ -1,4 +1,5 @@
 import Loader2 from 'react-loader';
+import PropTypes from 'prop-types';
 
 const Loader = ({ isLoading = true }) => {
   return (
@@ -24,6 +25,10 @@ const Loader = ({ isLoading = true }) => {
       loadedClassName="loadedContent"
     />
   );
+};
+
+Loader.propTypes = {
+  isLoading: PropTypes.bool,
 };
 
 export default Loader;

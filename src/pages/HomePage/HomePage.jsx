@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import pokemonsApi from 'services/pokemonsApi';
 import PokemonsGallery from 'components/PokemonsGallery';
-import { TextField, Grid, Box } from '@material-ui/core';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { TextField, Grid } from '@material-ui/core';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import pokedexImage from 'images/pokedex.png';
 
-const theme = createMuiTheme({
+const theme = createTheme({
   palette: {
     primary: {
       main: '#ffffff',
@@ -17,10 +17,6 @@ const HomePage = () => {
   const [pokemons, setPokemons] = useState([]);
   const [textInput, setTextInput] = useState('');
 
-  const changeHandler = event => {
-    setTextInput(event.target.value);
-  };
-
   useEffect(() => {
     pokemonsApi
       .fetchPokemons()
@@ -30,7 +26,11 @@ const HomePage = () => {
       .catch(error => console.log('ERROR: ', error));
   }, []);
 
-  const handleSearchPokemons = () => {
+  const changeHandler = event => {
+    setTextInput(event.target.value);
+  };
+
+  const handlePokemons = () => {
     const normalizedSearch = textInput.toLowerCase().trim();
     return pokemons.filter(pokemon =>
       pokemon.name.toLowerCase().includes(normalizedSearch),
@@ -54,11 +54,11 @@ const HomePage = () => {
             onChange={changeHandler}
             label="Search Pokemon"
             variant="outlined"
-            style={{ marginTop: '14px', minWidth: '300' }}
+            style={{ marginTop: '14px', minWidth: '280px' }}
           />
         </ThemeProvider>
       </Grid>
-      <PokemonsGallery pokemons={handleSearchPokemons()} />
+      <PokemonsGallery pokemons={handlePokemons()} />
     </>
   );
 };

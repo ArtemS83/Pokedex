@@ -1,0 +1,38 @@
+{
+  "files": {
+    "static/js/0.3ea30999.chunk.js": "/static/js/0.3ea30999.chunk.js",
+    "static/js/0.3ea30999.chunk.js.map": "/static/js/0.3ea30999.chunk.js.map",
+    "home-page.css": "/static/css/home-page.1a4104ea.chunk.css",
+    "home-page.js": "/static/js/home-page.5988d72f.chunk.js",
+    "home-page.js.map": "/static/js/home-page.5988d72f.chunk.js.map",
+    "main.css": "/static/css/main.649d693b.chunk.css",
+    "main.js": "/static/js/main.8dc83256.chunk.js",
+    "main.js.map": "/static/js/main.8dc83256.chunk.js.map",
+    "pokemonDetails-page.css": "/static/css/pokemonDetails-page.5da415e2.chunk.css",
+    "pokemonDetails-page.js": "/static/js/pokemonDetails-page.c943d543.chunk.js",
+    "pokemonDetails-page.js.map": "/static/js/pokemonDetails-page.c943d543.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2bdafc02.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2bdafc02.js.map",
+    "static/css/5.bc922b9c.chunk.css": "/static/css/5.bc922b9c.chunk.css",
+    "static/js/5.e5be376c.chunk.js": "/static/js/5.e5be376c.chunk.js",
+    "static/js/5.e5be376c.chunk.js.map": "/static/js/5.e5be376c.chunk.js.map",
+    "static/js/6.fd9ddb70.chunk.js": "/static/js/6.fd9ddb70.chunk.js",
+    "static/js/6.fd9ddb70.chunk.js.map": "/static/js/6.fd9ddb70.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/5.bc922b9c.chunk.css.map": "/static/css/5.bc922b9c.chunk.css.map",
+    "static/css/home-page.1a4104ea.chunk.css.map": "/static/css/home-page.1a4104ea.chunk.css.map",
+    "static/css/main.649d693b.chunk.css.map": "/static/css/main.649d693b.chunk.css.map",
+    "static/css/pokemonDetails-page.5da415e2.chunk.css.map": "/static/css/pokemonDetails-page.5da415e2.chunk.css.map",
+    "static/js/5.e5be376c.chunk.js.LICENSE.txt": "/static/js/5.e5be376c.chunk.js.LICENSE.txt",
+    "static/js/6.fd9ddb70.chunk.js.LICENSE.txt": "/static/js/6.fd9ddb70.chunk.js.LICENSE.txt",
+    "static/media/pokedex.ef8b0336.png": "/static/media/pokedex.ef8b0336.png",
+    "static/media/pokemon-bgi.1746260d.jpg": "/static/media/pokemon-bgi.1746260d.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2bdafc02.js",
+    "static/css/5.bc922b9c.chunk.css",
+    "static/js/5.e5be376c.chunk.js",
+    "static/css/main.649d693b.chunk.css",
+    "static/js/main.8dc83256.chunk.js"
+  ]
+}

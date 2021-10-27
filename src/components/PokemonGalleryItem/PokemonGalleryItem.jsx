@@ -34,16 +34,16 @@ const PokemonGalleryItem = ({ name, url, location }) => {
           state: { from: backLocation },
         }}
       >
-        <img
-          className={style.Image}
-          width={140}
-          height={150}
-          src={pokemon?.sprites.front_default}
-          loading="lazy"
-          alt={`Pokemon ${name} poster`}
-        />
+        <p>#{pokemon?.id}</p>
         <div className={style.div}>
-          <p>#{pokemon?.id}</p>
+          <img
+            className={style.Image}
+            width={140}
+            height={150}
+            src={pokemon?.sprites.front_default}
+            loading="lazy"
+            alt={`Pokemon ${name} poster`}
+          />
           <h2> {name} </h2>
         </div>
       </Link>
