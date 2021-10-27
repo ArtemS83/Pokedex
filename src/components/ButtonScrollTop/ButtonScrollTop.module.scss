@@ -1,0 +1,13 @@
+.buttonScrollTop {
+  position: fixed;
+  bottom: 15%;
+  right: 2.5%;
+  z-index: 2;
+
+  button {
+    padding: 6px;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 50%;
+  }
+}

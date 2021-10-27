@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import pokemonsApi from 'services/pokemonsApi';
 import PokemonsGallery from 'components/PokemonsGallery';
+import ButtonScrollTop from 'components/ButtonScrollTop';
 import { TextField, Grid } from '@material-ui/core';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import pokedexImage from 'images/pokedex.png';
@@ -59,6 +60,7 @@ const HomePage = () => {
         </ThemeProvider>
       </Grid>
       <PokemonsGallery pokemons={handlePokemons()} />
+      <ButtonScrollTop />
     </>
   );
 };
