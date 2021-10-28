@@ -1,5 +1,5 @@
 .netlify
-
+build
 # Logs
 logs
 *.log
