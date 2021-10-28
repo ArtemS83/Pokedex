@@ -9,8 +9,8 @@ const PokemonsGallery = ({ pokemons, onLoadMore, isLoading }) => {
   return (
     <>
       <ul className={style.list}>
-        {pokemons.map(({ name, url }) => (
-          <PokemonGalleryItem key={name} name={name} url={url} />
+        {pokemons.map(({ name }) => (
+          <PokemonGalleryItem key={name} name={name} />
         ))}
       </ul>
       <Grid

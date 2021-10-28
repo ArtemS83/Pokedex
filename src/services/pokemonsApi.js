@@ -15,15 +15,7 @@ async function fetchPokemon(name) {
     .catch(error => console.log('ERROR: ', error));
 }
 
-// async function fetchPok(url) {
-//   return await fetch(url)
-//     .then(result => result.json())
-//     .then(data => data)
-//     .catch(error => console.log('ERROR: ', error));;
-// }
-
 export default {
   fetchPokemons,
   fetchPokemon,
-  // fetchPok,
 };

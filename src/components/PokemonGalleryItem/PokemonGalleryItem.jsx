@@ -4,18 +4,9 @@ import pokemonsApi from 'services/pokemonsApi';
 import PropTypes from 'prop-types';
 import style from './PokemonGalleryItem.module.scss';
 
-const PokemonGalleryItem = ({ name, url, location }) => {
+const PokemonGalleryItem = ({ name, location }) => {
   const [pokemon, setPokemon] = useState(null);
   const backLocation = location.pathname;
-
-  // useEffect(() => {
-  //   pokemonsApi
-  //     .fetchPok(url)
-  //     .then(data => {
-  //       setPokemon(data);
-  //     })
-  //     .catch(error => console.log('ERROR: ', error));
-  // }, [url]);
 
   useEffect(() => {
     pokemonsApi
@@ -53,7 +44,6 @@ const PokemonGalleryItem = ({ name, url, location }) => {
 
 PokemonGalleryItem.propTypes = {
   name: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
 };
 
 export default withRouter(PokemonGalleryItem);
